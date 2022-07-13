@@ -1,6 +1,5 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import Trending from "./Trending";
-import Image from "next/image";
 import results from "./widgetInfo";
 
 function Widgets(props) {
@@ -23,7 +22,7 @@ function Widgets(props) {
             w-11/12 xl:w-10/12 mb-4 mt-3">
                 <h4 
                     className="font-bold text-xl px-4">
-                    What's happening?
+                    Whats happening?
                 </h4>
                 {results.map(Trending)}
                 <button 

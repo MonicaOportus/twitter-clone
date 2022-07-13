@@ -13,9 +13,8 @@ import Login from "../components/Login";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 import Comment from "../components/Comment";
 import Widgets from "../components/Widgets";
-import results from "../components/widgetInfo";
 
-function PostPage({ results, providers }) {
+function PostPage({ providers }) {
     const { data: session } = useSession();
     const [isOpen, setIsOpen] = useRecoilState(modalState);
     const router = useRouter();
