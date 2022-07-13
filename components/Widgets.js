@@ -41,21 +41,6 @@ function Widgets(props) {
                     className="font-bold text-xl px-4">
                     Who to follow
                 </h4>
-                {/* {followResults.map((result, index) => (
-                    <div
-                        key={index}
-                        className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3
-                        cursor-pointer transition duration-200 ease-out flex items-center"
-                    >
-                        <Image
-                            src={result.userImg}
-                            width={50}
-                            height={50}
-                            objectFit="cover"
-                            className="rounded-full"
-                        />
-                    </div>
-                ))} */}
                 <button 
                     className="hover:bg-white hover:bg-opacity-[0.03] px-4
                     py-3 cursor-pointer transition duration-200 ease-out flex

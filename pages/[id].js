@@ -13,8 +13,9 @@ import Login from "../components/Login";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 import Comment from "../components/Comment";
 import Widgets from "../components/Widgets";
+import results from "../components/widgetInfo";
 
-function PostPage({ trendingResults, followResults, providers }) {
+function PostPage({ results, providers }) {
     const { data: session } = useSession();
     const [isOpen, setIsOpen] = useRecoilState(modalState);
     const router = useRouter();
@@ -70,8 +71,6 @@ function PostPage({ trendingResults, followResults, providers }) {
             )}
           </div>
           <Widgets 
-            trendingResults={trendingResults} 
-            followResults={followResults}
             />
           {isOpen && <Modal/>}
         </main>
@@ -82,19 +81,11 @@ function PostPage({ trendingResults, followResults, providers }) {
 export default PostPage;
 
 export async function getServerSideProps(context) {
-    const trendingResults = await fetch("https://jsonkeeper.com/b/NKEV").then(
-      (res) => res.json()
-    );
-    const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
-      (res) => res.json()
-    );
     const providers = await getProviders();
     const session = await getSession(context);
   
     return {
       props: {
-        trendingResults,
-        followResults,
         providers,
         session,
       },
