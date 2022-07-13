@@ -15,6 +15,7 @@
     "emoji-mart": "^5.1.0",
     "emoji-picker-react": "^3.5.1",
     "firebase": "^9.8.4",
+    "heroku": "^7.60.2",
     "moment": "^2.29.4",
     "next": "12.2.0",
     "next-auth": "^4.9.0",
